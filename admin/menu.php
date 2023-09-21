@@ -15,16 +15,30 @@ if ($_POST["add_item"]){
     $price = $_POST["price"];
     $cat = $_POST["category"];
 
-    //Line for checking variable values
-    //echo $name . $price . $cat;
+    if ($name != "" && $price != "" && $cat != 0){
 
-    $sql_insert = "INSERT INTO `items` (`item_name`, `item_price`, `cat_id`) VALUES ('$name', '$price', '$cat')";
+        //Line for checking variable values
+        //echo $name . $price . $cat;
 
-    mysqli_query($connection, $sql_insert);
+        $sql_insert = "INSERT INTO `items` (`item_name`, `item_price`, `cat_id`) VALUES ('$name', '$price', '$cat')";
 
-    header('Location: menu.php');
+        mysqli_query($connection, $sql_insert);
+
+        header('Location: menu.php');
+    }
+}
+
+if ($_POST["delete_submit"]){
+
+    $delete_id = $_POST["item_delete"];
+    $sql = "DELETE FROM `items` WHERE id='$delete_id'";
+
+    mysqli_query($connection, $sql);
+
+    header("Location: menu.php");
 
 }
+
 
 ?>
 <!doctype html>
@@ -66,6 +80,23 @@ if ($_POST["add_item"]){
     </select>
     <input type="submit" name="add_item">
 </form>
+
+<h3>DELETE MENU ITEM</h3>
+
+<form action="menu.php" method="post">
+    <select name="item_delete" id="">
+        <?php
+        $sql = "SELECT * FROM `items`";
+        $result = mysqli_query($connection, $sql);
+        while ($row = mysqli_fetch_array($result)){
+        ?>
+            <option value="<?php echo $row["id"]?>"><?php echo $row["item_name"]?></option>
+        <?php } ?>
+    </select>
+    <input type="submit" name="delete_submit">
+</form>
+
+
 
 </body>
 </html>
