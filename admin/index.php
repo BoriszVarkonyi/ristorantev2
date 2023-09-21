@@ -34,20 +34,24 @@ else{
 }
 ?>
 
-<html>
-
-<?php
-
-echo $text
-
-?>
-
-<form action="index.php" method="post">
-<p>username</p>
-<input type="text" name="username" id="">
-<p>password</p>
-<input type="password" name="password" id="">
-<input type="submit" name="submit" id="" value="login">
-</form>
-
+<!DOCTYPE html>
+<html lang="be">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/normalize.css">
+    <link rel="stylesheet" href="./../css/basestyle.css">
+    <link rel="stylesheet" href="./../css/responsive.css">
+    <title>Francesco ADMIN</title>
+</head>
+<body>
+    <?php echo $text?>
+    <form action="index.php" method="post">
+        <p>Username</p>
+        <input type="text" name="username" id="">
+        <p>Password</p>
+        <input type="password" name="password" id="">
+        <input type="submit" name="submit" id="" value="login">
+    </form>
+</body>
 </html>

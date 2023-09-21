@@ -1,14 +1,16 @@
 <?php include 'db.php' ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="be">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/basestyle.css">
     <link rel="stylesheet" href="./css/mainstyle.css">
     <link rel="stylesheet" href="./css/responsive.css">
-    <title></title>
+    <title>Ristorante Francesco</title>
+    <meta name="description" content="Op zoek naar huisbereide pasta, verse, smaalvolle gerechten met een originele twist én lekkere wijn, rechtstreeks geimporteerd uit Italië?">
 </head>
 <body>
     <nav>
@@ -28,7 +30,7 @@
     </nav>
     <main>
         <div id="start" class="parallax-window" data-parallax="scroll" data-image-src="./img/bg-01.png">
-            <div class="section">
+            <div class="section start">
                 <div>
                     <h1>Francesco</h1>
                     <p class="page-detail">Op zoek naar huisbereide pasta, verse, smaalvolle gerechten met een originele twist én lekkere wijn, rechtstreeks geimporteerd uit <span class="italy-text">Italië</span>?</p>
@@ -38,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <div id="menu" class="parallax-window" data-parallax="scroll" data-image-src="./img/bg-02.png">
+        <div id="menu" class="parallax-window" data-parallax="scroll" data-image-src="./img/bg-05.png">
             <div class="section">
                 <h2>&#183; Menu &#183;</h2>
                 <div id="menu-wrapper">
@@ -255,7 +257,21 @@
         </div>
     </main>
     <footer>
-        <p>footer</p>
+        <div id="footer-content">
+            <div>
+                <b>Francesco Ristorante 2023 &copy;</b>
+                <div class="contact">
+                    <p>Adres: <span> Kapelsestraat 92, 2950 Kapellen, Belgium</span></p>
+                    <p>Telefoonnummer: <a href="tel:+32472260703">+32 472 26 07 03</a></p>
+                    <p>Sociaal: <span><a><img src="./img/facebook_white_24dp.svg" alt="Facebook"></a></span></p>
+                </div>
+            </div>
+            <div class="creators">
+                <b>Website created by:</b>
+                <p>Várkonyi Borisz</p>
+                <p>Wolfram Kristóf</p>
+            </div>
+        </div>
     </footer>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/parallax.min.js"></script>

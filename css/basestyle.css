@@ -1,0 +1,83 @@
+:root {
+    --c-black: rgb(14, 14, 14);
+    --c-black-transparent: rgba(14, 14, 14, 0.3);
+    --c-white: #FEFEFE;
+    --c-white-transparent: rgba(254, 254, 254, 0.2);
+    --c-gray: #9A8F8F;
+    --c-vanilla: #FEF0B6;
+    --c-vanilla-dark: #dace9b;
+    --c-vanilla-transparent: rgba(254, 240, 182, 0.5);
+    --c-brown: #BEB199;
+    --c-red: #BC4A3C;
+    --c-red-dark: #923b30;
+    --c-green: #3b9c5f;
+
+    --c-primary: #bca36f;
+    --c-primary-dark: #9b8454;
+
+    --c-red-logo: #cc2e39;
+    --c-green-logo: #2cb65f;
+
+    --l-nav-size: 3.7rem;
+}
+
+@font-face {
+    font-family: "LibreBaskerville";
+    src: url("../fonts/LibreBaskerville-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "LibreBaskerville";
+    src: url("../fonts/LibreBaskerville-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "LibreBaskerville";
+    src: url("../fonts/LibreBaskerville-Italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+}
+
+html, body, *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: LibreBaskerville, serif;
+    line-height: 1.3;
+    font-size: 15px;
+}
+
+html, body {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+i, em, .italic {
+    font-weight: 400;
+    font-style: italic;
+}
+
+b, strong, .bold {
+    font-weight: 700;
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin-block: 0;
+}
