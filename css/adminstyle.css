@@ -1,3 +1,47 @@
 html, body, *, *::before, *::after {
     color: var(--c-black);
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px !important;
+}
+
+#admin-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid var(--c-red);
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+input {
+    height: 30px;
+    margin: 7px 0;
+    border: 2px solid var(--c-red);
+    padding: 5px;
+    width: 300px;
+}
+
+button, input[type="button"], input[type="submit"] {
+    text-transform: uppercase;
+    margin-top: 7px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a {
+    display: list-item;
+    margin: 7px 0 7px 1rem;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--c-red);
+}

@@ -24,7 +24,7 @@ if ($_POST["submit"]){
         header('Location: functions.php');
     }
     else{
-        $text = "BAD";
+        $text = "Incorrect username or password";
     }
 
 }
@@ -41,12 +41,12 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/normalize.css">
     <link rel="stylesheet" href="./../css/basestyle.css">
-    <link rel="stylesheet" href="./../css/responsive.css">
+    <link rel="stylesheet" href="./../css/adminstyle.css">
     <title>Francesco ADMIN</title>
 </head>
 <body>
-    <?php echo $text?>
-    <form action="index.php" method="post">
+    <form action="index.php" method="post" id="admin-panel">
+        <?php echo $text?>
         <p>Username</p>
         <input type="text" name="username" id="">
         <p>Password</p>
