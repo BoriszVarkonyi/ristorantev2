@@ -39,51 +39,56 @@ if ($_POST["delete_submit"]){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/normalize.css">
+    <link rel="stylesheet" href="./../css/basestyle.css">
+    <link rel="stylesheet" href="./../css/adminstyle.css">
+    <title>Francesco ADMIN</title>
 </head>
 <body>
-<h1>MENU CATEGORIES</h1>
-<ul>
-    <?php
+    <div>
+        <h1>MENU CATEGORIES</h1>
+        <a href="functions.php">BACK</a>
+    </div>
+    <div id="admin-panel">
+        <ul>
+            <?php
 
-    while ($row = mysqli_fetch_array($result)){
+            while ($row = mysqli_fetch_array($result)){
 
-        ?>
-        <li><?php echo $row["cat_name"]?></li>
-        <?php
-    }
-    ?>
-</ul>
+                ?>
+                <li><?php echo $row["cat_name"]?></li>
+                <?php
+            }
+            ?>
+        </ul>
 
-<h3>Add menu category</h3>
-<form action="categories.php" method="post">
-    <input type="text" name="name" id="">
-    <input type="submit" name="add_cat">
-</form>
+        <h3>Add menu category</h3>
+        <form action="categories.php" method="post">
+            <input type="text" name="name" id="">
+            <input type="submit" name="add_cat">
+        </form>
 
-<h3>DELETE CATEGORY AND ALL OF IT'S ITEMS</h3>
+        <h3>DELETE CATEGORY AND ALL OF IT'S ITEMS</h3>
 
-<form action="categories.php" method="post">
+        <form action="categories.php" method="post">
 
-    <select name="cat_delete" id="">
-        <?php
+            <select name="cat_delete" id="">
+                <?php
 
-        $sql = "SELECT * FROM categories";
+                $sql = "SELECT * FROM categories";
 
-        $result = mysqli_query($connection, $sql);
+                $result = mysqli_query($connection, $sql);
 
-        while ($row = mysqli_fetch_array($result)){
+                while ($row = mysqli_fetch_array($result)){
 
-        ?>
-        <option value="<?php echo $row["id"]?>"><?php echo $row["cat_name"]?></option>
-        <?php } ?>
-    </select>
-    <input type="submit" name="delete_submit">
+                ?>
+                <option value="<?php echo $row["id"]?>"><?php echo $row["cat_name"]?></option>
+                <?php } ?>
+            </select>
+            <input type="submit" name="delete_submit" value="Delete">
 
-</form>
-<a href="functions.php">BACK</a>
+        </form>
+    </div>
 </body>
 </html>
