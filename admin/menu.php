@@ -67,7 +67,7 @@ if ($_POST["delete_submit"]){
     <p>item name</p>
     <input type="text" name="name" id="">
     <p>item price</p>
-    <input type="number" name="price" id="">€
+    <input type="text" name="price" id="">€
     <p>select category</p>
     <select name="category" id="">
         <?php
@@ -96,7 +96,7 @@ if ($_POST["delete_submit"]){
     <input type="submit" name="delete_submit">
 </form>
 
-
+<a href="functions.php">BACK</a>
 
 </body>
 </html>
