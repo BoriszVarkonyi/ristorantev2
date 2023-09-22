@@ -34,10 +34,10 @@ $half = mysqli_num_rows($res_item);
                 <div class="logo">
                     <img src="./img/logo.svg" alt="Ristorante Francesco Logo">
                 </div>
-                <a href="#start">Startpaginen</a>
+                <a href="#start">Startpagina</a>
                 <a href="#menu">Menu</a>
                 <a href="#about">Over ons</a>
-                <a href="#gallery">Fotogalrij</a>
+                <a href="#gallery">Fotogalerij</a>
                 <a href="#reserve">Reserveer nu online</a>
             </div>
         </div>
@@ -55,7 +55,7 @@ $half = mysqli_num_rows($res_item);
             <div class="section start">
                 <div>
                     <h1>Francesco</h1>
-                    <p class="page-detail">Op zoek naar huisbereide pasta, verse, smaalvolle gerechten met een originele twist én lekkere wijn, rechtstreeks geimporteerd uit <span class="italy-text">Italië</span>?</p>
+                    <p class="page-detail">Op zoek naar huisbereide pasta, verse, smaakvolle gerechten met een originele twist én lekkere wijn, rechtstreeks geimporteerd uit <span class="italy-text">Italië</span>?</p>
                     <p class="page-detail bold">Welkom bij Francesco!</p>
                     <p class="page-detail">Een gezellig Italiaans restaurant met mooi ingericht terras en ruime parkeermogelijkheden.
                         Het interieur van de zaak werd begin september ’23 helemaal vernieuwd.</p>
@@ -86,7 +86,7 @@ $half = mysqli_num_rows($res_item);
 
                             <div>
                                 <h4><?php echo $item_row["item_name"]?></h4>
-                                <p><?php echo $item_row["item_price"]?>€</p>
+                                <p><?php echo $item_row["item_price"]?></p>
                             </div>
 
                     <?php
@@ -297,8 +297,8 @@ $half = mysqli_num_rows($res_item);
                     <p>Sinds kort bij team Francesco, buitte vroeger de succesvolle B&B Entre Amis uit in Boedapest. Heeft deze nieuwe uitdaging  gevonden dankzij haar passie voor de Italiaanse keuken.</p>
                     <div class="contact">
                         <p>Adres: <span> Kapelsestraat 92, 2950 Kapellen, Belgium</span></p>
-                        <p>Telefoonnummer: <a href="tel:+32472260703">+32 472 26 07 03</a></p>
-                        <p>Sociaal: <span><a><img src="./img/facebook_white_24dp.svg" alt="Facebook"></a></span></p>
+                        <p>Contact: <a href="tel:+32472260703">+32 472 26 07 03</a><a href="tel:+32472260703">+32 496 21 40 25</a></p>
+                        <p><span><a href="https://m.facebook.com/profile.php/?id=100057390011764"><img src="./img/facebook_white_24dp.svg" alt="Facebook"></a></span></p>
                     </div>
                 </div>
             </div>
