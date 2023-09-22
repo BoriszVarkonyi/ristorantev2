@@ -1,4 +1,19 @@
-<?php include 'db.php' ?>
+<?php
+global $connection;
+include 'db.php';
+error_reporting(E_ERROR | E_PARSE);
+
+$sql_cat = "SELECT * FROM `categories`";
+$sql_item = "SELECT * FROM `items`";
+$sql_gallery = "SELECT * FROM `gallery`";
+
+$res_cat = mysqli_query($connection, $sql_cat);
+$res_item = mysqli_query($connection, $sql_item);
+$res_gallery = mysqli_query($connection, $sql_gallery);
+
+$half = mysqli_num_rows($res_item);
+
+?>
 
 <!DOCTYPE html>
 <html lang="be">
@@ -52,7 +67,44 @@
                 <h2>&#183; Menu &#183;</h2>
                 <div id="menu-wrapper">
                     <div class="menu-column">
-                        <h3>Antipasti</h3>
+
+                    <?php
+                    $counter = 1;
+                    $halfed = false;
+                    while ($row = mysqli_fetch_array($res_cat)){
+
+                    ?>
+
+                      <h3><?php echo $row["cat_name"]?></h3>
+                        <?php
+                        $catid = $row["id"];
+                        $sql_item_bycat = "SELECT * FROM `items` WHERE cat_id='$catid'";
+                        $res_item_bycat = mysqli_query($connection, $sql_item_bycat);
+                        while ($item_row = mysqli_fetch_array($res_item_bycat)){
+
+                        ?>
+
+                            <div>
+                                <h4><?php echo $item_row["item_name"]?></h4>
+                                <p><?php echo $item_row["item_price"]?>€</p>
+                            </div>
+
+                    <?php
+                            if ($counter >= $half/2 && $halfed==false){
+                                $halfed = true;
+                                ?>
+                        </div>
+                        <div class="menu-column">
+
+                        <?php
+                            }
+
+                            $counter++;
+                        }
+                    }
+                    ?>
+
+                        <!--<h3>Antipasti</h3>
                         <div>
                             <h4>Bruschetta Classic</h4>
                             <p>€12</p>
@@ -93,6 +145,8 @@
                             <h4>Antipasto Italiano 2p</h4>
                             <p>€19.5</p>
                         </div>
+
+
                         <h3>Pasta</h3>
                         <div>
                             <h4>Tagliatelle Ragu</h4>
@@ -130,6 +184,8 @@
                             <h4>Spaghetti Frutti Di Mare</h4>
                             <p>€27.5</p>
                         </div>
+
+
                         <h3>Vlees</h3>
                         <div>
                             <h4>Saltimbocca Alla Romana</h4>
@@ -148,6 +204,10 @@
                             <p>€28.5</p>
                         </div>
                     </div>
+
+
+
+
                     <div class="menu-column">
                         <h3>Vis</h3>
                         <div>
@@ -166,6 +226,8 @@
                             <h4>Gambas Naar Keuze</h4>
                             <p>€31.5</p>
                         </div>
+
+
                         <h3>Dolci</h3>
                         <div>
                             <h4>Tiramisu</h4>
@@ -218,7 +280,7 @@
                         <div>
                             <h4>Limone Ripieno (Gevulde Citroen Met Ijs)</h4>
                             <p>€7</p>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -245,15 +307,16 @@
             <div class="section">
                 <h2>&#183; Fotogalrij &#183;</h2>
                 <div id="gallery-wrapper">
-                    <img src="./img/stock.jpg" alt="">
-                    <img src="./img/stock.jpg" alt="">
-                    <img src="./img/stock.jpg" alt="">
-                    <img src="./img/stock.jpg" alt="">
-                    <img src="./img/stock.jpg" alt="">
-                    <img src="./img/stock.jpg" alt="">
-                    <img src="./img/stock.jpg" alt="">
-                    <img src="./img/stock.jpg" alt="">
-                    <img src="./img/stock.jpg" alt="">
+
+                    <?php
+
+                    while ($row = mysqli_fetch_array($res_gallery)){
+                    ?>
+                        <img src="./gallery/<?php echo $row["path"] ?>" alt="">
+                    <?php
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>

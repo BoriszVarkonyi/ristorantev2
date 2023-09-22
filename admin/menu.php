@@ -52,53 +52,53 @@ if ($_POST["delete_submit"]){
     <title>Francesco ADMIN</title>
 </head>
 <body>
-    <div id="admin-header">
-        <h1>MENU ITEMS</h1>
-        <a href="functions.php">BACK</a>
-    </div>
-    <div id="admin-panel">
-        <ul>
+<div id="admin-header">
+    <h1>MENU ITEMS</h1>
+    <a href="functions.php">BACK</a>
+</div>
+<div id="admin-panel">
+    <ul>
+        <?php
+        while ($row = mysqli_fetch_array($result)){
+            ?>
+            <li><p><?php echo $row["item_name"]?></p><p><?php echo $row["item_price"] . " euro"?></p><p><?php echo "CAT-ID: " . $row["cat_id"]?></p></li>
+        <?php } ?>
+    </ul>
+
+    <h3>ADD MENU ITEM</h3>
+
+    <form action="menu.php" method="post">
+        <p>item name</p>
+        <input type="text" name="name" id="">
+        <p>item price</p>
+        <input type="number" name="price" id="">€
+        <p>select category</p>
+        <select name="category" id="">
             <?php
-            while ($row = mysqli_fetch_array($result)){
-                ?>
-                <li><p><?php echo $row["item_name"]?></p><p><?php echo $row["item_price"] . " euro"?></p><p><?php echo "CAT-ID: " . $row["cat_id"]?></p></li>
-            <?php } ?>
-        </ul>
-
-        <h3>ADD MENU ITEM</h3>
-
-        <form action="menu.php" method="post">
-            <p>item name</p>
-            <input type="text" name="name" id="">
-            <p>item price</p>
-            <input type="number" name="price" id="">€
-            <p>select category</p>
-            <select name="category" id="">
-                <?php
-                while ($row = mysqli_fetch_array($result_cat)){
+            while ($row = mysqli_fetch_array($result_cat)){
                 ?>
                 <option value="<?php echo $row["id"]?>"><?php echo $row["cat_name"]?></option>
                 <?php
-                }
-                ?>
-            </select>
-            <input type="submit" name="add_item">
-        </form>
+            }
+            ?>
+        </select>
+        <input type="submit" name="add_item">
+    </form>
 
-        <h3>DELETE MENU ITEM</h3>
+    <h3>DELETE MENU ITEM</h3>
 
-        <form action="menu.php" method="post">
-            <select name="item_delete" id="">
-                <?php
-                $sql = "SELECT * FROM `items`";
-                $result = mysqli_query($connection, $sql);
-                while ($row = mysqli_fetch_array($result)){
+    <form action="menu.php" method="post">
+        <select name="item_delete" id="">
+            <?php
+            $sql = "SELECT * FROM `items`";
+            $result = mysqli_query($connection, $sql);
+            while ($row = mysqli_fetch_array($result)){
                 ?>
-                    <option value="<?php echo $row["id"]?>"><?php echo $row["item_name"]?></option>
-                <?php } ?>
-            </select>
-            <input type="submit" name="delete_submit">
-        </form>
-    </div>
+                <option value="<?php echo $row["id"]?>"><?php echo $row["item_name"]?></option>
+            <?php } ?>
+        </select>
+        <input type="submit" name="delete_submit">
+    </form>
+</div>
 </body>
 </html>
