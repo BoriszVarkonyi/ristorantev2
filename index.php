@@ -112,184 +112,6 @@ $half = mysqli_num_rows($res_item);
                         }
                     }
                     ?>
-
-                        <!--<h3>Antipasti</h3>
-                        <div>
-                            <h4>Bruschetta Classic</h4>
-                            <p>€12</p>
-                        </div>
-                        <div>
-                            <h4>Bruschetta Vijgen, Parma, Geitenkaas</h4>
-                            <p>€16</p>
-                        </div>
-                        <div>
-                            <h4>Vitello Tonnato</h4>
-                            <p>€16</p>
-                        </div>
-                        <div>
-                            <h4>Zalmtartaar</h4>
-                            <p>€16.5</p>
-                        </div>
-                        <div>
-                            <h4>Carpaccio Van Zalm</h4>
-                            <p>€16.5</p>
-                        </div>
-                        <div>
-                            <h4>Rundscarpaccio Met Ruccola Parmezaan</h4>
-                            <p>€18.5</p>
-                        </div>
-                        <div>
-                            <h4>Lauwe Salade Van Octopus</h4>
-                            <p>€19.5</p>
-                        </div>
-                        <div>
-                            <h4>Bruschetta Krab</h4>
-                            <p>€19.5</p>
-                        </div>
-                        <div>
-                            <h4>Bruschetta Krab</h4>
-                            <p>€19.5</p>
-                        </div>
-                        <div>
-                            <h4>Antipasto Italiano 2p</h4>
-                            <p>€19.5</p>
-                        </div>
-
-
-                        <h3>Pasta</h3>
-                        <div>
-                            <h4>Tagliatelle Ragu</h4>
-                            <p>€15.5</p>
-                        </div>
-                        <div>
-                            <h4>Lasagna Von De Chef</h4>
-                            <p>€17.5</p>
-                        </div>
-                        <div>
-                            <h4>Ravioli Ricotta En Spinazie</h4>
-                            <p>€18.5</p>
-                        </div>
-                        <div>
-                            <h4>Spaghetti Alla Puttanesca</h4>
-                            <p>€16.5</p>
-                        </div>
-                        <div>
-                            <h4>Tagliatelle Zalm Met Zalmcaviaar</h4>
-                            <p>€20.5</p>
-                        </div>
-                        <div>
-                            <h4>Lasagna Calamari En Scampi</h4>
-                            <p>€21.5</p>
-                        </div>
-                        <div>
-                            <h4>Linguini Vongole</h4>
-                            <p>€25</p>
-                        </div>
-                        <div>
-                            <h4>Ravioli St Jacobs En Scampi</h4>
-                            <p>€26.5</p>
-                        </div>
-                        <div>
-                            <h4>Spaghetti Frutti Di Mare</h4>
-                            <p>€27.5</p>
-                        </div>
-
-
-                        <h3>Vlees</h3>
-                        <div>
-                            <h4>Saltimbocca Alla Romana</h4>
-                            <p>€26.5</p>
-                        </div>
-                        <div>
-                            <h4>Kalfslapjes Met Citroensaus</h4>
-                            <p>€26.5</p>
-                        </div>
-                        <div>
-                            <h4>Tagliata Ruccola Parmezaan</h4>
-                            <p>€28.5</p>
-                        </div>
-                        <div>
-                            <h4>Lamsfilet Met Groentjes</h4>
-                            <p>€28.5</p>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="menu-column">
-                        <h3>Vis</h3>
-                        <div>
-                            <h4>Heilbot Met Zwarte Rijst</h4>
-                            <p>€23.5</p>
-                        </div>
-                        <div>
-                            <h4>Gebakken Zalm</h4>
-                            <p>€23.5</p>
-                        </div>
-                        <div>
-                            <h4>Gegrilde Octopus</h4>
-                            <p>€26.5</p>
-                        </div>
-                        <div>
-                            <h4>Gambas Naar Keuze</h4>
-                            <p>€31.5</p>
-                        </div>
-
-
-                        <h3>Dolci</h3>
-                        <div>
-                            <h4>Tiramisu</h4>
-                            <p>€8.5</p>
-                        </div>
-                        <div>
-                            <h4>Créme Brulée</h4>
-                            <p>€8.5</p>
-                        </div>
-                        <div>
-                            <h4>Panna Cotta</h4>
-                            <p>€8.5</p>
-                        </div>
-                        <div>
-                            <h4>Sorbetto Al Limone (Citroensorbet)</h4>
-                            <p>€8</p>
-                        </div>
-                        <div>
-                            <h4>Sorbetto Al Limone Con Limoncello (Citroensorbet&Limoncello)</h4>
-                            <p>€13</p>
-                        </div>
-                        <div>
-                            <h4>Gelato Alla Vaniglia (Vanilla Ijs)</h4>
-                            <p>€7</p>
-                        </div>
-                        <div>
-                            <h4>Gelato Al Caffé (Mokka Ijs)</h4>
-                            <p>€7</p>
-                        </div>
-                        <div>
-                            <h4>Gelato Alla Cioccolato (Chocolade Ijs)</h4>
-                            <p>€7</p>
-                        </div>
-                        <div>
-                            <h4>Gelato Alla Vaniglia Con Frutta Rossa (Vanilla Ijs Met Rood Fruit)</h4>
-                            <p>€12</p>
-                        </div>
-                        <div>
-                            <h4>Dame Blanche</h4>
-                            <p>€8</p>
-                        </div>
-                        <div>
-                            <h4>Coupe Brésilienne</h4>
-                            <p>€8</p>
-                        </div>
-                        <div>
-                            <h4>Tartuffo Biano O Néro (Tartuffo Ijs Wit Of Zwart)</h4>
-                            <p>€7</p>
-                        </div>
-                        <div>
-                            <h4>Limone Ripieno (Gevulde Citroen Met Ijs)</h4>
-                            <p>€7</p>
-                        </div>-->
                     </div>
                 </div>
             </div>
@@ -307,7 +129,11 @@ $half = mysqli_num_rows($res_item);
                     <div class="contact">
                         <p>Adres: <span> Kapelsestraat 92, 2950 Kapellen, Belgium</span></p>
                         <p>Contact: <a href="tel:+32472260703">+32 472 26 07 03</a><a href="tel:+32472260703">+32 496 21 40 25</a></p>
-                        <p><span><a href="https://m.facebook.com/profile.php/?id=100057390011764"><img src="./img/facebook_white_24dp.svg" alt="Facebook"></a></span></p>
+                        <div>
+                            <a href="https://facebook.com/profile.php/?id=100057390011764" target="_blank"><img src="./img/facebook_white_24dp.svg" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/ristorante_francesco/?fbclid=IwAR36Vx-KZY_Sv1_sbcYX6ODHTnfNFVeXHa4ewmFqQ_g_hUVrjsol5ijxFaU" target="_blank"><img src="./img/instagram_white_24dp.svg" alt="Instagram"></a>
+                            <a href="https://www.tripadvisor.be/Restaurant_Review-g2030826-d4481571-Reviews-Francesco-Kapellen_Antwerp_Province.html" target="_blank"><img src="./img/trip_advisor_white_24dp.svg" alt="Trip Advisor"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -337,12 +163,17 @@ $half = mysqli_num_rows($res_item);
     </main>
     <footer>
         <div id="footer-content">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9972.599544072787!2d4.4169388!3d51.3267629!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c40917d110c6af%3A0x39873880ec4343a!2sFrancesco!5e0!3m2!1shu!2shu!4v1695419174722!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div>
                 <b>Francesco Ristorante 2023 &copy;</b>
-                <div class="contact">
+                <div class="contact footer">
                     <p>Adres: <span> Kapelsestraat 92, 2950 Kapellen, Belgium</span></p>
-                    <p>Telefoonnummer: <a href="tel:+32472260703">+32 472 26 07 03</a></p>
-                    <p>Sociaal: <span><a><img src="./img/facebook_white_24dp.svg" alt="Facebook"></a></span></p>
+                    <p>Contact: <a href="tel:+32472260703">+32 472 26 07 03</a><a href="tel:+32472260703">+32 496 21 40 25</a></p>
+                    <div>
+                        <a href="https://facebook.com/profile.php/?id=100057390011764" target="_blank"><img src="./img/facebook_white_24dp.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/ristorante_francesco/?fbclid=IwAR36Vx-KZY_Sv1_sbcYX6ODHTnfNFVeXHa4ewmFqQ_g_hUVrjsol5ijxFaU" target="_blank"><img src="./img/instagram_white_24dp.svg" alt="Instagram"></a>
+                        <a href="https://www.tripadvisor.be/Restaurant_Review-g2030826-d4481571-Reviews-Francesco-Kapellen_Antwerp_Province.html" target="_blank"><img src="./img/trip_advisor_white_24dp.svg" alt="Trip Advisor"></a>
+                    </div>
                 </div>
             </div>
             <div class="creators">
@@ -357,7 +188,7 @@ $half = mysqli_num_rows($res_item);
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script>
 
-        var mobileMenu = document.getElementById("#navigation-mobile-dropdown");
+        var mobileMenu = document.getElementById("navigation-mobile-dropdown");
 
         function openNavigation() {
             mobileMenu.classList.toggle("opened");

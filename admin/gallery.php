@@ -41,44 +41,48 @@ if ($_POST["delete"]){
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/normalize.css">
+    <link rel="stylesheet" href="./../css/basestyle.css">
+    <link rel="stylesheet" href="./../css/adminstyle.css">
+    <title>Francesco ADMIN</title>
 </head>
 <body>
-<h3>IMAGES</h3>
-<?php
-while ($row = mysqli_fetch_array($result)){
-?>
-    <p><?php echo $row["id"]?></p>
-    <img style="width: 200px; height: 200px" src="../gallery/<?php echo $row["path"]?>" alt="">
-<?php } ?>
-<h3>UPLOAD IMAGE</h3>
-
-<form action="gallery.php" method="post" enctype="multipart/form-data">
-
-    <input type="file" name="FileToUpload" id="FileToUpload">
-    <input type="submit" name="upload">
-
-</form>
-
-<h3>DELETE IMAGE</h3>
-
-<form action="gallery.php" method="post">
-    <select name="del_select" id="">
+    <div id="admin-header">
+        <h1>GALLERY</h1>
+        <a href="functions.php">BACK</a>
+    </div>
+    <div id="admin-panel">
         <?php
-        $sql = "SELECT * FROM `gallery`";
-        $result = mysqli_query($connection,$sql);
         while ($row = mysqli_fetch_array($result)){
         ?>
-            <option value="<?php echo $row["id"] ?>"><?php echo $row["id"] ?></option>
+            <p><?php echo $row["id"]?></p>
+            <img style="width: 200px; height: 200px" src="../gallery/<?php echo $row["path"]?>" alt="">
         <?php } ?>
-    </select>
-    <input type="submit" name="delete" id="">
-</form>
+        <h3>UPLOAD IMAGE</h3>
 
-<a href="functions.php">BACK</a>
+        <form action="gallery.php" method="post" enctype="multipart/form-data">
+
+            <input type="file" name="FileToUpload" id="FileToUpload">
+            <input type="submit" name="upload">
+
+        </form>
+
+        <h3>DELETE IMAGE</h3>
+
+        <form action="gallery.php" method="post">
+            <select name="del_select" id="">
+                <?php
+                $sql = "SELECT * FROM `gallery`";
+                $result = mysqli_query($connection,$sql);
+                while ($row = mysqli_fetch_array($result)){
+                ?>
+                    <option value="<?php echo $row["id"] ?>"><?php echo $row["id"] ?></option>
+                <?php } ?>
+            </select>
+            <input type="submit" name="delete" id="">
+        </form>
+    </div>
 </body>
 </html>
