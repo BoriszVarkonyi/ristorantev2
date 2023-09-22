@@ -48,7 +48,6 @@ nav {
     height: var(--l-nav-size);
 }
 
-
 /*
 #navigation-desktop .logo::before {
     content: '';
@@ -94,6 +93,16 @@ nav {
     opacity: 1;
 }
 
+#navigation-mobile {
+    overflow: hidden;
+    width: 100%;
+    height: var(--l-nav-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c-primary);
+    border-bottom: 3px solid var(--c-vanilla);
+}
 
 main {
     margin-top: var(--l-nav-size);

@@ -26,7 +26,14 @@
                 <a href="#reserve">Reserveer nu online</a>
             </div>
         </div>
-        <div id="navigation-mobile">mobile</div>
+        <div id="navigation-mobile">
+            <div class="logo">
+                <img src="./img/logo.svg" alt="Ristorante Francesco Logo">
+            </div>
+            <button id="nav-button">
+                <img src="./img/menu_white.24dp.svg" alt="Menu">
+            </button>
+        </div>
     </nav>
     <main>
         <div id="start" class="parallax-window" data-parallax="scroll" data-image-src="./img/bg-01.png">
