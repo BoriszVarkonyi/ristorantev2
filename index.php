@@ -45,9 +45,18 @@ $half = mysqli_num_rows($res_item);
             <div class="logo">
                 <img src="./img/logo.svg" alt="Ristorante Francesco Logo">
             </div>
-            <button id="nav-button">
-                <img src="./img/menu_white.24dp.svg" alt="Menu">
+            <button id="nav-button" onclick="openNavigation()">
+                <img src="./img/menu_white_24dp.svg" alt="Menu">
             </button>
+        </div>
+        <div id="navigation-mobile-dropdown">
+            <div>
+                <a href="#start">Startpaginen</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">Over ons</a>
+                <a href="#gallery">Fotogalrij</a>
+                <a href="#reserve">Reserveer nu online</a>
+            </div>
         </div>
     </nav>
     <main>
@@ -347,6 +356,12 @@ $half = mysqli_num_rows($res_item);
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script>
+
+        var mobileMenu = document.getElementById("#navigation-mobile-dropdown");
+
+        function openNavigation() {
+            mobileMenu.classList.toggle("opened");
+        }
 
         function checkAndShowHideMenu() {
             if(window.innerWidth < 768) {

@@ -40,7 +40,6 @@ nav {
 }
 
 #navigation-desktop .logo {
-    position: relative;
     z-index: 1;
 }
 
@@ -98,10 +97,61 @@ nav {
     width: 100%;
     height: var(--l-nav-size);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    grid-template-rows: 1fr;
     background-color: var(--c-primary);
     border-bottom: 3px solid var(--c-vanilla);
+    padding: 0 2rem;
+}
+
+#navigation-mobile .logo {
+    display: flex;
+    align-items: center;
+}
+
+#navigation-mobile .logo img {
+    height: var(--l-nav-size);
+}
+
+#nav-button {
+    background-color: transparent;
+}
+
+#nav-button img {
+    width: 2rem;
+    height: 2rem;
+}
+
+#navigation-mobile-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    background-color: var(--c-white-transparent);
+    max-height: 0;
+    overflow: hidden;
+}
+
+#navigation-mobile-dropdown div {
+    padding: 1.5rem;
+}
+
+#navigation-mobile-dropdown.opened {
+    max-height: 230px;
+    overflow: hidden;
+}
+
+#navigation-mobile-dropdown a {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.1rem;
+    padding: 3px 5px;
+    background-color: var(--c-red);
+    box-shadow: 3px 3px #923b30;
+    text-align: center;
+    width: fit-content;
 }
 
 main {
