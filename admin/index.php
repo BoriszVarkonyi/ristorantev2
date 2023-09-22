@@ -45,6 +45,9 @@ else{
     <title>Francesco ADMIN</title>
 </head>
 <body>
+    <div id="admin-header">
+        <h1>ADMIN LOGIN</h1>
+    </div>
     <form action="index.php" method="post" id="admin-panel">
         <?php echo $text?>
         <p>Username</p>
