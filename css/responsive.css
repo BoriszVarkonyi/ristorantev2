@@ -88,7 +88,7 @@
     #navigation-mobile {
         display: none;
     }
-    .section {
+    .section, #modal-content {
         max-width: 900px;
     }
     .section-block {
@@ -121,7 +121,7 @@
     #navigation-mobile {
         display: none;
     }
-    .section {
+    .section, #modal-content {
         max-width: 900px;
     }
     .section-block {

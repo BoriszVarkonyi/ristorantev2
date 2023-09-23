@@ -25,6 +25,9 @@ $half = mysqli_num_rows($res_item);
     <link rel="stylesheet" href="./css/mainstyle.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <title>Ristorante Francesco</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
     <meta name="description" content="Op zoek naar huisbereide pasta, verse, smaalvolle gerechten met een originele twist én lekkere wijn, rechtstreeks geimporteerd uit Italië?">
 </head>
 <body>
@@ -60,6 +63,16 @@ $half = mysqli_num_rows($res_item);
         </div>
     </nav>
     <main>
+        <div id="modal">
+            <div id="modal-content">
+                <div>
+                    <img src="./img/bg-01.png" id="showcased-image">
+                    <button onclick="closeImage()">
+                        <img src="./img/close_white_24dp.svg" alt="Close">
+                    </button>
+                </div>
+            </div>
+        </div>
         <div id="start" class="parallax-window" data-parallax="scroll" data-image-src="./img/bg-01.png">
             <div class="section start">
                 <div>
@@ -147,7 +160,7 @@ $half = mysqli_num_rows($res_item);
 
                     while ($row = mysqli_fetch_array($res_gallery)){
                     ?>
-                        <img src="./gallery/<?php echo $row["path"] ?>" alt="">
+                        <img src="./gallery/<?php echo $row["path"] ?>" onclick="openImage('./gallery/<?php echo $row["path"] ?>')">
                     <?php
                     }
                     ?>
@@ -187,6 +200,18 @@ $half = mysqli_num_rows($res_item);
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script>
+
+        var modal = document.getElementById("modal");
+        var modalImage = document.getElementById("showcased-image");
+
+        function openImage(filePath) {
+            modal.classList.add("opened");
+            modalImage.src = filePath;
+        }
+
+        function closeImage() {
+            modal.classList.remove("opened");
+        }
 
         var mobileMenu = document.getElementById("navigation-mobile-dropdown");
 
