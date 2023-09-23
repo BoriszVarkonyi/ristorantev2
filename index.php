@@ -66,7 +66,7 @@ $half = mysqli_num_rows($res_item);
         <div id="modal">
             <div id="modal-content">
                 <div>
-                    <img src="./img/bg-01.png" id="showcased-image">
+                    <img loading="lazy" src="./img/bg-01.png" id="showcased-image">
                     <button onclick="closeImage()">
                         <img src="./img/close_white_24dp.svg" alt="Close">
                     </button>
@@ -160,7 +160,7 @@ $half = mysqli_num_rows($res_item);
 
                     while ($row = mysqli_fetch_array($res_gallery)){
                     ?>
-                        <img src="./gallery/<?php echo $row["path"] ?>" onclick="openImage('./gallery/<?php echo $row["path"] ?>')">
+                        <img loading="lazy" src="./gallery/<?php echo $row["path"] ?>" onclick="openImage('./gallery/<?php echo $row["path"] ?>')">
                     <?php
                     }
                     ?>
